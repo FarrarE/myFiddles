@@ -1,0 +1,222 @@
+html,
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.enter-button {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background: #ffffff;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  -webkit-box-shadow: 12px 12px 24px #bababa, -12px -12px 24px #ffffff;
+          box-shadow: 12px 12px 24px #bababa, -12px -12px 24px #ffffff;
+  -webkit-animation: emerge 2s;
+          animation: emerge 2s;
+}
+
+.enter-button:hover {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+}
+
+.enter-button:active {
+  -webkit-box-shadow: inset 20px 20px 60px #d9d9d9,  inset -20px -20px 60px #ffffff;
+          box-shadow: inset 20px 20px 60px #d9d9d9,  inset -20px -20px 60px #ffffff;
+}
+
+.enter-button:active .start {
+  color: #48e8b5;
+}
+
+.enter-button::after {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  right: 0;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 0.5rem ridge rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  -webkit-animation-name: ripple;
+          animation-name: ripple;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+  -webkit-animation-timing-function: cubic-bezier(0.7, 0.1, 0.34, 1);
+          animation-timing-function: cubic-bezier(0.7, 0.1, 0.34, 1);
+  z-index: -1;
+}
+
+.enter-button::before {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  right: 0;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  width: 100%;
+  border: 0.5rem ridge rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  -webkit-animation-name: ripple;
+          animation-name: ripple;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+  -webkit-animation-timing-function: cubic-bezier(0.7, 0.1, 0.34, 1);
+          animation-timing-function: cubic-bezier(0.7, 0.1, 0.34, 1);
+  z-index: -1;
+}
+
+.start {
+  font-weight: bold;
+  font-family: impact;
+  font-size: 2rem;
+  color: grey;
+  -webkit-animation: fade-in 4s;
+          animation: fade-in 4s;
+}
+
+@-webkit-keyframes ripple {
+  from {
+    opacity: 1;
+    -webkit-transform: scale3d(0.75, 0.75, 1);
+            transform: scale3d(0.75, 0.75, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1.5, 1.5, 1);
+            transform: scale3d(1.5, 1.5, 1);
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    -webkit-transform: scale3d(0.75, 0.75, 1);
+            transform: scale3d(0.75, 0.75, 1);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale3d(1.5, 1.5, 1);
+            transform: scale3d(1.5, 1.5, 1);
+  }
+}
+
+@-webkit-keyframes emerge {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    -webkit-box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+            box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  }
+  100% {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    -webkit-box-shadow: 12px 12px 24px #bababa, -12px -12px 24px #ffffff;
+            box-shadow: 12px 12px 24px #bababa, -12px -12px 24px #ffffff;
+  }
+}
+
+@keyframes emerge {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  50% {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    -webkit-box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+            box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  }
+  100% {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    -webkit-box-shadow: 12px 12px 24px #bababa, -12px -12px 24px #ffffff;
+            box-shadow: 12px 12px 24px #bababa, -12px -12px 24px #ffffff;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=index.css.map */
